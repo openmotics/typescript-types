@@ -1,5 +1,5 @@
 {
-  "name": "typescript-types",
+  "name": "openmotics-types",
   "version": "1.0.0",
   "description": "The OpenMotics types",
   "main": "index.js",
