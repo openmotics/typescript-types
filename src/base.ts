@@ -30,24 +30,28 @@ export interface BaseObjectApi<T = Status> {
   id: number;
   location: {
     floor_coordinates: {
-      x: number;
-      y: number;
+      x: number | null;
+      y: number | null;
     };
-    floor_id: number;
+    floor_id: number | null;
     installation_id: number;
-    room_id: number;
+    room_id: number | null;
   };
   name: string;
   status: T;
 }
 
 export interface BaseObject<T = Status> {
-  uniqueId: string;
   id: number;
   name: string;
+  capabilities: string[];
   location: {
+    floorCoordinates: {
+      x: number | null;
+      y: number | null;
+    };
     installationId: number;
-    roomId: number;
+    roomId: number | null;
   };
   status: T;
 }
