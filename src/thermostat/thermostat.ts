@@ -3,7 +3,12 @@ import { Configuration } from './thermostat-api';
 
 export type ThermostatGroupState = 'ON' | 'OFF';
 export type ThermostatMode = 'HEATING' | 'COOLING';
-export type ThermostatPreset = 'AUTO' | 'AWAY' | 'VACATION' | 'PARTY';
+export enum ThermostatPreset {
+  Auto = 'AUTO',
+  Away = 'AWAY',
+  Vacation = 'VACATION',
+  Party = 'PARTY',
+}
 
 export interface ThermostatSupport {
   heatingOnly: boolean;
