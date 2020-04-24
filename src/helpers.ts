@@ -1,3 +1,7 @@
+import { RoomImageApi, RoomImage } from '../index';
+import { SceneApi, Scene } from './scene';
+import { OutputApi, Output } from './output';
+
 const capitalizeFirstLetter = (str: string, index: number): string => {
   const lowerCaseStr = str.toLowerCase();
   if (index === 0) {
@@ -6,7 +10,7 @@ const capitalizeFirstLetter = (str: string, index: number): string => {
   return lowerCaseStr.charAt(0).toUpperCase() + lowerCaseStr.slice(1);
 };
 
-export const prepareResponseObject = (data: { [key: string]: any } | object[]): object | null => {
+const prepareResponseObject = (data: { [key: string]: any } | object[]): any => {
   if (Array.isArray(data)) {
     return data.map((item: object) => prepareResponseObject(item));
   } else if (data === null) {
@@ -24,6 +28,12 @@ export const prepareResponseObject = (data: { [key: string]: any } | object[]): 
     });
     return resultObject;
   }
-
   return data;
 };
+
+export const parseApiResponse = {
+  
+  toOutput:     (response: OutputApi): Output         => prepareResponseObject(response),
+  toRoomImage:  (response: RoomImageApi): RoomImage   => prepareResponseObject(response),
+  toScene:      (response: SceneApi): Scene           => prepareResponseObject(response),
+}
