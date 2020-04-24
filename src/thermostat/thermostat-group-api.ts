@@ -1,8 +1,8 @@
 import { ThermostatPreset } from './thermostat';
-import { Acl } from '../base';
+import { AclApi } from '../base';
 import { ThermostatGroupStatus } from './thermostat-group';
 
-export interface ThermostatGroupApi extends Acl {
+export interface ThermostatGroupApi extends AclApi {
   id: number;
   capabilities: string[];
   status: ThermostatGroupStatus;
