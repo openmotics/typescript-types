@@ -28,13 +28,12 @@ const prepareResponseObject = (data: { [key: string]: any } | object[]): any => 
     });
     return resultObject;
   }
-
   return data;
 };
 
 export const parseApiResponse = {
-
-  toOutput:     (data: OutputApi): Output         => prepareResponseObject(data),
-  toRoomImage:  (data: RoomImageApi): RoomImage   => prepareResponseObject(data),
-  toScene:      (data: SceneApi): Scene           => prepareResponseObject(data),
+  
+  toOutput:     (response: OutputApi): Output         => prepareResponseObject(response),
+  toRoomImage:  (response: RoomImageApi): RoomImage   => prepareResponseObject(response),
+  toScene:      (response: SceneApi): Scene           => prepareResponseObject(response),
 }
