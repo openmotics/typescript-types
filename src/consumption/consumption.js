@@ -6,9 +6,3 @@ var ConsumptionType;
     ConsumptionType["Gas"] = "GAS";
     ConsumptionType["Water"] = "WATER";
 })(ConsumptionType = exports.ConsumptionType || (exports.ConsumptionType = {}));
-var StatisticsIntervalResolution;
-(function (StatisticsIntervalResolution) {
-    StatisticsIntervalResolution["Month"] = "M";
-    StatisticsIntervalResolution["Day"] = "D";
-    StatisticsIntervalResolution["Hour"] = "h";
-})(StatisticsIntervalResolution = exports.StatisticsIntervalResolution || (exports.StatisticsIntervalResolution = {}));

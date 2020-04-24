@@ -38,23 +38,6 @@ export interface Statistics {
     };
     unit: string;
 }
-export interface MeterData extends Consumption {
-    statistics: Statistics | null;
-    consumptionType: string;
-    isEmpty: boolean;
-}
-export interface MeterParams {
-    end: number;
-    start: number;
-    delta?: boolean;
-    label?: string;
-    resolution: StatisticsIntervalResolution;
-}
-export declare enum StatisticsIntervalResolution {
-    Month = "M",
-    Day = "D",
-    Hour = "h"
-}
 export interface StatisticsValue {
     absolute: ConsumptionValue;
     relative: ConsumptionValue;
