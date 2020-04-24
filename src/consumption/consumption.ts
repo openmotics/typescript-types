@@ -79,7 +79,7 @@ export interface Statistics {
 
 export interface Consumption<T = ConsumptionData> {
   id: number;
-  name: string;
+  name: string; 
   labelType: string;
   data: T[];
 }
