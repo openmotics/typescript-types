@@ -4,6 +4,12 @@ export enum ConsumptionType {
   Water = 'WATER',
 }
 
+export enum ConsumptionResolution {
+  Month = "M",
+  Day = "D",
+  Hour = "h"
+}
+
 export interface ConsumptionValue {
   unit: string;
   value: number;
@@ -11,7 +17,7 @@ export interface ConsumptionValue {
 
 export interface ConsumptionData {
   consumptionType: ConsumptionType;
-  resolution: string;
+  resolution: ConsumptionResolution;
   period: number;
   measurements: {
     data: {
