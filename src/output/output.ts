@@ -1,3 +1,3 @@
 import { BaseObject } from '../base';
 
-export interface Outlet extends BaseObject {}
+export interface Output extends BaseObject {}
