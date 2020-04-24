@@ -1,7 +1,7 @@
 import { BaseObject } from '../base';
 import { Configuration } from './thermostat-api';
 
-export enum ThermostatGroupState {
+export enum ThermostatState {
   On = 'ON',
   Off = 'OFF',
 }
