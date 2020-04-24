@@ -1,4 +1,8 @@
-export declare type ConsumptionType = 'ELECTRICITY' | 'GAS' | 'WATER';
+export declare enum ConsumptionType {
+    Electricity = "ELECTRICITY",
+    Gas = "GAS",
+    Water = "WATER"
+}
 export interface ConsumptionValue {
     unit: string;
     value: number;
@@ -44,7 +48,12 @@ export interface MeterParams {
     start: number;
     delta?: boolean;
     label?: string;
-    resolution: 'D' | 'h' | 'M';
+    resolution: StatisticsIntervalResolution;
+}
+export declare enum StatisticsIntervalResolution {
+    Month = "M",
+    Day = "D",
+    Hour = "h"
 }
 export interface StatisticsValue {
     absolute: ConsumptionValue;

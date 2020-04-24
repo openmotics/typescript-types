@@ -1,7 +1,13 @@
 import { BaseObject } from '../base';
 import { Configuration } from './thermostat-api';
-export declare type ThermostatGroupState = 'ON' | 'OFF';
-export declare type ThermostatMode = 'HEATING' | 'COOLING';
+export declare enum ThermostatGroupState {
+    On = "ON",
+    Off = "OFF"
+}
+export declare enum ThermostatMode {
+    Heating = "HEATING",
+    Cooling = "COOLING"
+}
 export declare enum ThermostatPreset {
     Auto = "AUTO",
     Away = "AWAY",
