@@ -7,9 +7,9 @@ var capitalizeFirstLetter = function (str, index) {
     }
     return lowerCaseStr.charAt(0).toUpperCase() + lowerCaseStr.slice(1);
 };
-exports.prepareResponseObject = function (data) {
+var prepareResponseObject = function (data) {
     if (Array.isArray(data)) {
-        return data.map(function (item) { return exports.prepareResponseObject(item); });
+        return data.map(function (item) { return prepareResponseObject(item); });
     }
     else if (data === null) {
         return null;
@@ -21,10 +21,15 @@ exports.prepareResponseObject = function (data) {
                 var keyParts = key.startsWith('_')
                     ? key.replace(/\_/gi, '')
                     : key.split('_').map(capitalizeFirstLetter).join('');
-                resultObject_1[keyParts] = exports.prepareResponseObject(data[key]);
+                resultObject_1[keyParts] = prepareResponseObject(data[key]);
             }
         });
         return resultObject_1;
     }
     return data;
+};
+exports.parseApiResponse = {
+    toOutput: function (response) { return prepareResponseObject(response); },
+    toRoomImage: function (response) { return prepareResponseObject(response); },
+    toScene: function (response) { return prepareResponseObject(response); },
 };
