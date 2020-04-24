@@ -22,6 +22,6 @@ export interface ThermostatStatus {
     preset: ThermostatPreset;
     isActive: boolean;
 }
-export interface ThermostatModel extends BaseObject<ThermostatStatus> {
+export interface Thermostat extends BaseObject<ThermostatStatus> {
     configuration: Configuration;
 }

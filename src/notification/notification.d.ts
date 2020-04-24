@@ -1,5 +1,5 @@
 import { NotificationBase } from './notification-api';
-export interface NotificationModel extends NotificationBase {
+export interface Notification extends NotificationBase {
     installationId: number;
     createdAt: number;
 }

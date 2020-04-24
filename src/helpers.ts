@@ -1,4 +1,9 @@
-import { RoomImageApi, RoomImage } from '../index';
+import { ConsumptionApiData, ConsumptionData, StatisticsApi, Statistics } from './consumption';
+import { DeviceApi, Device } from './device';
+import { InstallationApi, Installation } from './installation';
+import { NotificationApi } from './notification';
+
+
 import { SceneApi, Scene } from './scene';
 import { OutputApi, Output } from './output';
 
@@ -33,7 +38,22 @@ const prepareResponseObject = (data: { [key: string]: any } | object[]): any => 
 
 export const parseApiResponse = {
   
-  toOutput:     (response: OutputApi): Output         => prepareResponseObject(response),
-  toRoomImage:  (response: RoomImageApi): RoomImage   => prepareResponseObject(response),
-  toScene:      (response: SceneApi): Scene           => prepareResponseObject(response),
+  // Consumption
+  toConsumptionData: (response: ConsumptionApiData): ConsumptionData => prepareResponseObject(response),
+  toStatistics: (response: StatisticsApi): Statistics => prepareResponseObject(response),
+
+  // Device
+  toDevice: (response: DeviceApi): Device => prepareResponseObject(response),
+
+  // Installation
+  toInstallation: (response: InstallationApi): Installation => prepareResponseObject(response),
+
+  // Notification
+  toNotification: (response: NotificationApi): Notification => prepareResponseObject(response),
+
+  // Output
+  toOutput: (response: OutputApi): Output => prepareResponseObject(response),
+  
+  // Scene
+  ToScene: (response: SceneApi): Scene => prepareResponseObject(response),
 }

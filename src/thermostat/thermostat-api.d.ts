@@ -11,5 +11,5 @@ export interface Configuration {
     cooling: ConfigurationData | null;
     heating: ConfigurationData | null;
 }
-export interface ThermostatApiModel extends BaseObjectApi<ThermostatApiState> {
+export interface ThermostatApi extends BaseObjectApi<ThermostatApiState> {
 }

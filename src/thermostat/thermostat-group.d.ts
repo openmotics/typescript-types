@@ -4,7 +4,7 @@ export interface ThermostatGroupStatus {
     mode: ThermostatMode;
     state: ThermostatGroupState;
 }
-export interface ThermostatGroupModel extends BaseObject<ThermostatGroupStatus> {
+export interface ThermostatGroup extends BaseObject<ThermostatGroupStatus> {
     acl: {
         setMode: {
             allowed: boolean;
