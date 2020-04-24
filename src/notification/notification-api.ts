@@ -5,7 +5,7 @@ export interface NotificationBase {
   topic: string;
 }
 
-export interface NotificationApiModel extends NotificationBase {
+export interface NotificationApi extends NotificationBase {
   installation_id: number;
   created_at: number;
 }

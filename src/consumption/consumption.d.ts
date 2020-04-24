@@ -34,18 +34,6 @@ export interface Statistics {
     };
     unit: string;
 }
-export interface MeterData extends Consumption {
-    statistics: Statistics | null;
-    consumptionType: string;
-    isEmpty: boolean;
-}
-export interface MeterParams {
-    end: number;
-    start: number;
-    delta?: boolean;
-    label?: string;
-    resolution: 'D' | 'h' | 'M';
-}
 export interface StatisticsValue {
     absolute: ConsumptionValue;
     relative: ConsumptionValue;

@@ -1,5 +1,5 @@
 import { Feature, InstallationUpdate } from "./installation";
-export interface InstallationApiModel {
+export interface InstallationApi {
     id: number;
     name: string;
     _acl: {
