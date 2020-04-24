@@ -4,7 +4,11 @@ export interface RoomImage {
   original?: string;
 }
 
-export type ImageSize = 'SMALL' | 'MEDIUM' | 'ORIGINAL';
+export enum ImageSize {
+  Small = 'SMALL',
+  Medium = 'MEDIUM',
+  Original = 'ORIGINAL',
+}
 
 export interface Room {
   id: number;

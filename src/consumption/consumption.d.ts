@@ -1,4 +1,8 @@
-export declare type ConsumptionType = 'ELECTRICITY' | 'GAS' | 'WATER';
+export declare enum ConsumptionType {
+    Electricity = "ELECTRICITY",
+    Gas = "GAS",
+    Water = "WATER"
+}
 export interface ConsumptionValue {
     unit: string;
     value: number;

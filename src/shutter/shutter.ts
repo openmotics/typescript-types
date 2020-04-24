@@ -1,6 +1,11 @@
 import { BaseObject } from '../base';
 
-export type ShutterState = 'up' | 'stopped' | 'down';
+export enum ShutterState {
+  Up = 'up',
+  Stopped = 'stopped',
+  Down = 'down',
+}
+
 export interface ShutterStatus {
   state: ShutterState;
 }

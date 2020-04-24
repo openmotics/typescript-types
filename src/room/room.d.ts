@@ -3,7 +3,11 @@ export interface RoomImage {
     medium?: string;
     original?: string;
 }
-export declare type ImageSize = 'SMALL' | 'MEDIUM' | 'ORIGINAL';
+export declare enum ImageSize {
+    Small = "SMALL",
+    Medium = "MEDIUM",
+    Original = "ORIGINAL"
+}
 export interface Room {
     id: number;
     name: string;

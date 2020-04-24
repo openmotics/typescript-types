@@ -29,7 +29,17 @@ var prepareResponseObject = function (data) {
     return data;
 };
 exports.parseApiResponse = {
+    // Consumption
+    toConsumptionData: function (response) { return prepareResponseObject(response); },
+    toStatistics: function (response) { return prepareResponseObject(response); },
+    // Device
+    toDevice: function (response) { return prepareResponseObject(response); },
+    // Installation
+    toInstallation: function (response) { return prepareResponseObject(response); },
+    // Notification
+    toNotification: function (response) { return prepareResponseObject(response); },
+    // Output
     toOutput: function (response) { return prepareResponseObject(response); },
-    toRoomImage: function (response) { return prepareResponseObject(response); },
-    toScene: function (response) { return prepareResponseObject(response); },
+    // Scene
+    ToScene: function (response) { return prepareResponseObject(response); },
 };
