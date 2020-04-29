@@ -1,9 +1,9 @@
 {
-  "name": "openmotics-types",
-  "version": "1.0.0",
+  "name": "openmotics-type",
+  "version": "1.0.1",
   "description": "The OpenMotics types",
-  "main": "./src/index.js",
-  "typings": "src/index.d.ts",
+  "types": "src/index.d.ts",
+  "main": "src/helpers.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"

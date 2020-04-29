@@ -1,7 +1,5 @@
 export * from './helpers';
 
-export * from './thermostat';
-
 declare module 'openmotics-types' {
   export * from 'openmotics-types/output';
   export * from 'openmotics-types/room';
@@ -9,6 +7,7 @@ declare module 'openmotics-types' {
   export * from 'openmotics-types/sensor';
   export * from 'openmotics-types/installation';
   export * from 'openmotics-types/notification';
+  export * from 'openmotics-types/thermostat';
   export * from 'openmotics-types/base';
   export * from 'openmotics-types/consumption';
   export * from 'openmotics-types/user';
