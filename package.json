@@ -1,8 +1,9 @@
 {
   "name": "openmotics-types",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "The OpenMotics types",
-  "main": "./index.js",
+  "main": "./src/index.js",
+  "typings": "src/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
@@ -23,6 +24,5 @@
   "homepage": "https://github.com/openmotics/typescript-types#readme",
   "devDependencies": {
     "typescript": "^3.8.3"
-  },
-  "types": "./index.d.ts"
+  }
 }

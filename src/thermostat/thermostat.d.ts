@@ -1,6 +1,6 @@
-import { BaseObject } from '../base';
+import { BaseObject, Location } from '../base';
 import { Configuration } from './thermostat-api';
-export declare enum ThermostatGroupState {
+export declare enum ThermostatState {
     On = "ON",
     Off = "OFF"
 }
@@ -28,6 +28,11 @@ export interface ThermostatStatus {
     preset: ThermostatPreset;
     isActive: boolean;
 }
+interface ThermostatLocation extends Location {
+    thermostatGroupId: number;
+}
 export interface Thermostat extends BaseObject<ThermostatStatus> {
     configuration: Configuration;
+    location: ThermostatLocation;
 }
+export {};
