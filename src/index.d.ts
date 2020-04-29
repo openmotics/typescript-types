@@ -1,13 +1,17 @@
-export * from './base';
 export * from './helpers';
-export * from './device';
-export * from './output';
-export * from './room';
-export * from './scene';
-export * from './user';
-export * from './sensor';
-export * from './shutter';
-export * from './installation';
-export * from './consumption';
-export * from './notification';
+
 export * from './thermostat';
+
+declare module 'openmotics-types' {
+  export * from 'openmotics-types/output';
+  export * from 'openmotics-types/room';
+  export * from 'openmotics-types/scene';
+  export * from 'openmotics-types/sensor';
+  export * from 'openmotics-types/installation';
+  export * from 'openmotics-types/notification';
+  export * from 'openmotics-types/base';
+  export * from 'openmotics-types/consumption';
+  export * from 'openmotics-types/user';
+  export * from 'openmotics-types/shutter';
+  export * from 'openmotics-types/device';
+}
