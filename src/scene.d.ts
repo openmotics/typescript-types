@@ -1,9 +1,9 @@
-declare module 'openmotics-types/scene' {
-  import { BaseObject, BaseObjectApi } from "openmotics-types/base";
 
-  export interface SceneApi extends BaseObjectApi {
-    actions: number[];
-  }
+import { BaseObject, BaseObjectApi } from "./base";
 
-  export type Scene = BaseObject;
+export interface SceneApi extends BaseObjectApi {
+  actions: number[];
 }
+
+export type Scene = BaseObject;
+

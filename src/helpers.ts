@@ -1,10 +1,10 @@
-import { ConsumptionApiData, ConsumptionData, StatisticsApi, Statistics } from 'openmotics-types/consumption';
-import { DeviceApi, Device } from 'openmotics-types/device';
-import { InstallationApi, Installation } from 'openmotics-types/installation';
-import { NotificationApi } from 'openmotics-types/notification';
+import { ConsumptionApiData, ConsumptionData, StatisticsApi, Statistics } from './consumption';
+import { DeviceApi, Device } from './device';
+import { InstallationApi, Installation } from './installation';
+import { NotificationApi } from './notification';
 
-import { SceneApi, Scene } from 'openmotics-types/scene';
-import { OutputApi, Output } from 'openmotics-types/output';
+import { SceneApi, Scene } from './scene';
+import { OutputApi, Output } from './output';
 
 const capitalizeFirstLetter = (str: string, index: number): string => {
   const lowerCaseStr = str.toLowerCase();

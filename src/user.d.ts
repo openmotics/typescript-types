@@ -1,5 +1,5 @@
-declare module 'openmotics-types/user' {
-  import { Acl } from "openmotics-types/base";
+
+  import { Acl } from "./base";
 
   /**
    * 
@@ -37,4 +37,3 @@ declare module 'openmotics-types/user' {
     firstName: string;
     lastName: string;
   }
-}
