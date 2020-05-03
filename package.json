@@ -1,6 +1,6 @@
 {
   "name": "openmotics-types",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "The OpenMotics types",
   "types": "src/index.d.ts",
   "main": "src/helpers.js",
