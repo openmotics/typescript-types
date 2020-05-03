@@ -29,7 +29,7 @@ interface ThermostatLocationApi extends LocationApi {
   thermostat_group_id: number;
 }
 
-export interface ThermostatApi extends BaseObjectApi<ThermostatApiState> {
+export interface ThermostatApi extends BaseObjectApi<ThermostatApiState>, AclApi {
   location: ThermostatLocationApi;
 }
 
@@ -89,7 +89,7 @@ interface ThermostatLocation extends Location {
   thermostatGroupId: number;
 }
 
-export interface Thermostat extends BaseObject<ThermostatStatus> {
+export interface Thermostat extends BaseObject<ThermostatStatus>, Acl {
   configuration: Configuration;
   location: ThermostatLocation;
 }
