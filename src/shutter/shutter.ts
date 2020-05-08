@@ -6,6 +6,12 @@ export enum ShutterState {
   Down = 'down',
 }
 
+export enum ShutterDirections {
+  up = 'UP',
+  down = 'DOWN',
+  stopped = 'STOP',
+};
+
 export interface ShutterStatus {
   state: ShutterState;
 }

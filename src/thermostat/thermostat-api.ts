@@ -1,4 +1,4 @@
-import { BaseObjectApi, ConfigurationData, LocationApi } from '../base';
+import { BaseObjectApi, ConfigurationData, LocationApi, AclApi } from '../base';
 import { ThermostatPreset } from './thermostat';
 
 export interface ThermostatApiState {
@@ -18,6 +18,6 @@ interface ThermostatLocationApi extends LocationApi {
   thermostat_group_id: number;
 }
 
-export interface ThermostatApi extends BaseObjectApi<ThermostatApiState> {
+export interface ThermostatApi extends BaseObjectApi<ThermostatApiState>, AclApi {
   location: ThermostatLocationApi;
 }
