@@ -6,3 +6,10 @@ var ShutterState;
     ShutterState["Stopped"] = "stopped";
     ShutterState["Down"] = "down";
 })(ShutterState = exports.ShutterState || (exports.ShutterState = {}));
+var ShutterDirections;
+(function (ShutterDirections) {
+    ShutterDirections["up"] = "UP";
+    ShutterDirections["down"] = "DOWN";
+    ShutterDirections["stopped"] = "STOP";
+})(ShutterDirections = exports.ShutterDirections || (exports.ShutterDirections = {}));
+;

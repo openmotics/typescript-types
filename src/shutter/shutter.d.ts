@@ -4,6 +4,11 @@ export declare enum ShutterState {
     Stopped = "stopped",
     Down = "down"
 }
+export declare enum ShutterDirections {
+    up = "UP",
+    down = "DOWN",
+    stopped = "STOP"
+}
 export interface ShutterStatus {
     state: ShutterState;
 }

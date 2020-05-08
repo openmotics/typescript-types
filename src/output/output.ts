@@ -16,6 +16,3 @@ export enum OutputType {
 export interface Output extends BaseObject {
   type: OutputType;
 }
-export interface OutputApi extends BaseObjectApi {
-  type: OutputType;
-}
