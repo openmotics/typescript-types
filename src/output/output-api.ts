@@ -1,3 +1,6 @@
 import { BaseObjectApi } from '../base';
+import { OutputType } from './output';
 
-export type OutputApi = BaseObjectApi;
+export interface OutputApi extends BaseObjectApi {
+  type: OutputType;
+}

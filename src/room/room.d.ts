@@ -1,7 +1,8 @@
 export interface RoomImage {
-    small: string;
-    medium?: string;
-    original?: string;
+    height: number;
+    size: ImageSize;
+    url: string;
+    width: number;
 }
 export declare enum ImageSize {
     Small = "SMALL",
@@ -11,6 +12,6 @@ export declare enum ImageSize {
 export interface Room {
     id: number;
     name: string;
+    floorId: number;
     image: RoomImage;
-    installationId: number;
 }

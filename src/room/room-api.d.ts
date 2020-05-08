@@ -1,7 +1,7 @@
-import { ImageSize } from "./room";
-export interface RoomImageApi {
-    height: number;
-    size: ImageSize;
-    url: string;
-    width: number;
+import { RoomImage } from "./room";
+export interface RoomApi {
+    id: number;
+    name: string;
+    floor_id: number;
+    image?: RoomImage;
 }

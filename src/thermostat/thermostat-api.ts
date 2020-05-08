@@ -1,4 +1,4 @@
-import { BaseObjectApi, ConfigurationData } from '../base';
+import { BaseObjectApi, ConfigurationData, LocationApi, AclApi } from '../base';
 import { ThermostatPreset } from './thermostat';
 
 export interface ThermostatApiState {
@@ -14,4 +14,10 @@ export interface Configuration {
   heating: ConfigurationData | null;
 }
 
-export interface ThermostatApi extends BaseObjectApi<ThermostatApiState> { }
+interface ThermostatLocationApi extends LocationApi {
+  thermostat_group_id: number;
+}
+
+export interface ThermostatApi extends BaseObjectApi<ThermostatApiState>, AclApi {
+  location: ThermostatLocationApi;
+}

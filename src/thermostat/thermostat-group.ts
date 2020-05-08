@@ -1,9 +1,9 @@
-import { ThermostatGroupState, ThermostatMode, ThermostatPreset } from './thermostat';
+import { ThermostatState, ThermostatMode, ThermostatPreset } from './thermostat';
 import { Acl } from '../base';
 
 export interface ThermostatGroupStatus {
   mode: ThermostatMode;
-  state: ThermostatGroupState;
+  state: ThermostatState;
 }
 
 export interface ThermostatGroup extends Acl {

@@ -1,3 +1,18 @@
-import { BaseObject } from '../base';
+import { BaseObject, BaseObjectApi } from '../base';
 
-export interface Output extends BaseObject {}
+export enum OutputType {
+  Light = 'LIGHT',
+  Outlet = 'OUTLET',
+  Valve = 'VALVE',
+  Appliance = 'APPLIANCE',
+  Alarm = 'ALARM',
+  Pump = 'PUMP',
+  Hvac = 'HVAC',
+  Generic = 'GENERIC',
+  Motor = 'MOTOR',
+  Ventilation = 'Ventilation',
+}
+
+export interface Output extends BaseObject {
+  type: OutputType;
+}

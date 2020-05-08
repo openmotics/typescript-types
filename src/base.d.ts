@@ -79,6 +79,8 @@ export interface Status {
     value?: number;
 }
 export interface ConfigurationData {
+    output_0_id: number | null;
+    output_1_id: number | null;
     presets: {
         AWAY: number;
         PARTY: number;
@@ -90,7 +92,7 @@ export interface ConfigurationData {
         }>;
     };
 }
-interface LocationApi {
+export interface LocationApi {
     floor_coordinates: {
         x: number | null;
         y: number | null;
@@ -99,7 +101,7 @@ interface LocationApi {
     installation_id: number;
     room_id: number | null;
 }
-interface Location {
+export interface Location {
     floorCoordinates: {
         x: number | null;
         y: number | null;
@@ -108,4 +110,3 @@ interface Location {
     roomId: number | null;
     installationId: number;
 }
-export {};

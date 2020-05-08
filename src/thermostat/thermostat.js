@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var ThermostatGroupState;
-(function (ThermostatGroupState) {
-    ThermostatGroupState["On"] = "ON";
-    ThermostatGroupState["Off"] = "OFF";
-})(ThermostatGroupState = exports.ThermostatGroupState || (exports.ThermostatGroupState = {}));
+var ThermostatState;
+(function (ThermostatState) {
+    ThermostatState["On"] = "ON";
+    ThermostatState["Off"] = "OFF";
+})(ThermostatState = exports.ThermostatState || (exports.ThermostatState = {}));
 var ThermostatMode;
 (function (ThermostatMode) {
     ThermostatMode["Heating"] = "HEATING";
