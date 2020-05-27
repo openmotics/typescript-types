@@ -79,8 +79,8 @@ export interface BaseConfigurationApi {
   timer_down: number;
   timer_up: number;
   up_down_config: number;
-  cooling: ConfigurationData | null;
-  heating: ConfigurationData | null;
+  cooling: ConfigurationDataApi | null;
+  heating: ConfigurationDataApi | null;
 }
 
 export interface BaseConfiguration {
@@ -95,6 +95,21 @@ export interface BaseConfiguration {
 }
 
 export interface ConfigurationData {
+    output0Id: number | null;
+    output1Id: number | null;
+    presets: {
+        AWAY: number;
+        PARTY: number;
+        VACATION: number;
+    };
+    schedule: {
+        data: Array<{
+            [time: number]: number;
+        }>;
+    };
+}
+
+export interface ConfigurationDataApi {
     output_0_id: number | null;
     output_1_id: number | null;
     presets: {
@@ -108,6 +123,7 @@ export interface ConfigurationData {
         }>;
     };
 }
+
 export interface LocationApi {
     floor_coordinates: {
         x: number | null;
@@ -117,6 +133,7 @@ export interface LocationApi {
     installation_id: number;
     room_id: number | null;
 }
+
 export interface Location {
     floorCoordinates: {
         x: number | null;
