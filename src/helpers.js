@@ -40,6 +40,16 @@ exports.parseApiResponse = {
     toNotification: function (response) { return prepareResponseObject(response); },
     // Output
     toOutput: function (response) { return prepareResponseObject(response); },
+    // Room
+    toRoom: function (response) { return prepareResponseObject(response); },
     // Scene
-    ToScene: function (response) { return prepareResponseObject(response); },
+    toScene: function (response) { return prepareResponseObject(response); },
+    // Sensor
+    toSensor: function (response) { return prepareResponseObject(response); },
+    // Shutter
+    toShutter: function (response) { return prepareResponseObject(response); },
+    // Thermostat
+    toThermostat: function (response) { return prepareResponseObject(response); },
+    // User
+    toUser: function (response) { return prepareResponseObject(response); },
 };

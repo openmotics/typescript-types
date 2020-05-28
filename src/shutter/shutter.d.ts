@@ -1,8 +1,10 @@
 import { BaseObject } from '../base';
 export declare enum ShutterState {
-    Up = "up",
-    Stopped = "stopped",
-    Down = "down"
+    Up = "UP",
+    GoingUp = "GOING_UP",
+    Down = "DOWN",
+    GoingDown = "GOING_DOWN",
+    Stopped = "STOPPED"
 }
 export declare enum ShutterDirections {
     up = "UP",

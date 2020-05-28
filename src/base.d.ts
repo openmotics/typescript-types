@@ -34,15 +34,24 @@ export interface Acl {
  *
  * @param id - The id of appliance
  * @param name - The name of appliance
+ * @param configuration - The configuration of appliance
  * @param capabilities - The capabilities of appliance, may include "ON_OFF" | "RANGE"
- * @param configuration - The configuration of appliance {@link BaseConfigurationApi}
  * @param location - Location is an object that describes where the appliance is located {@link Location}
  * @param status: Status is an object that describes status of the appliance, it can be "OFF/ON" and also include other information {@link Status}
  */
 export interface BaseObjectApi<T = Status> {
     _version: number;
     capabilities: string[];
-    configuration?: BaseConfigurationApi;
+    configuration: {
+        group_1: number;
+        group_2: number;
+        name: string;
+        timer_down: number;
+        timer_up: number;
+        up_down_config: number;
+        cooling: ConfigurationData | null;
+        heating: ConfigurationData | null;
+    };
     id: number;
     location: LocationApi;
     name: string;
@@ -55,7 +64,6 @@ export interface BaseObjectApi<T = Status> {
  * @param id - The id of appliance
  * @param name - The name of appliance
  * @param capabilities - The capabilities of appliance, may include "ON_OFF" | "RANGE"
- * @param configuration - The configuration of appliance {@link BaseConfiguration}
  * @param location - Location is an object that describes where the appliance is located {@link Location}
  * @param status: Status is an object that describes status of the appliance, it can be "OFF/ON" and also include other information {@link Status}
  */
@@ -63,7 +71,6 @@ export interface BaseObject<T = Status> {
     id: number;
     name: string;
     capabilities: string[];
-    configuration?: BaseConfiguration;
     location: Location;
     status: T;
 }
@@ -71,45 +78,7 @@ export interface Status {
     on: boolean;
     value?: number;
 }
-
-export interface BaseConfigurationApi {
-  group_1: number;
-  group_2: number;
-  name: string;
-  timer_down: number;
-  timer_up: number;
-  up_down_config: number;
-  cooling: ConfigurationDataApi | null;
-  heating: ConfigurationDataApi | null;
-}
-
-export interface BaseConfiguration {
-  group1: number;
-  group2: number;
-  name: string;
-  timerDown: number;
-  timerUp: number;
-  upDownConfig: number;
-  cooling: ConfigurationData | null;
-  heating: ConfigurationData | null;
-}
-
 export interface ConfigurationData {
-    output0Id: number | null;
-    output1Id: number | null;
-    presets: {
-        AWAY: number;
-        PARTY: number;
-        VACATION: number;
-    };
-    schedule: {
-        data: Array<{
-            [time: number]: number;
-        }>;
-    };
-}
-
-export interface ConfigurationDataApi {
     output_0_id: number | null;
     output_1_id: number | null;
     presets: {
@@ -123,7 +92,6 @@ export interface ConfigurationDataApi {
         }>;
     };
 }
-
 export interface LocationApi {
     floor_coordinates: {
         x: number | null;
@@ -133,7 +101,6 @@ export interface LocationApi {
     installation_id: number;
     room_id: number | null;
 }
-
 export interface Location {
     floorCoordinates: {
         x: number | null;

@@ -6,6 +6,11 @@ import { NotificationApi } from './notification';
 
 import { SceneApi, Scene } from './scene';
 import { OutputApi, Output } from './output';
+import { Room, RoomApi } from './room';
+import { Sensor, SensorApi } from './sensor';
+import { ShutterApi, Shutter } from './shutter';
+import { ThermostatApi, Thermostat } from './thermostat';
+import { User, UserApi } from './user';
 
 const capitalizeFirstLetter = (str: string, index: number): string => {
   const lowerCaseStr = str.toLowerCase();
@@ -54,6 +59,21 @@ export const parseApiResponse = {
   // Output
   toOutput: (response: OutputApi): Output => prepareResponseObject(response),
   
+  // Room
+  toRoom: (response: RoomApi): Room => prepareResponseObject(response),
+
   // Scene
-  ToScene: (response: SceneApi): Scene => prepareResponseObject(response),
+  toScene: (response: SceneApi): Scene => prepareResponseObject(response),
+
+  // Sensor
+  toSensor: (response: SensorApi): Sensor => prepareResponseObject(response),
+
+  // Shutter
+  toShutter: (response: ShutterApi): Shutter => prepareResponseObject(response),
+
+  // Thermostat
+  toThermostat: (response: ThermostatApi): Thermostat => prepareResponseObject(response),
+
+  // User
+  toUser: (response: UserApi): User => prepareResponseObject(response),
 }
