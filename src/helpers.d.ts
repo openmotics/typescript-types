@@ -4,6 +4,11 @@ import { InstallationApi, Installation } from './installation';
 import { NotificationApi } from './notification';
 import { SceneApi, Scene } from './scene';
 import { OutputApi, Output } from './output';
+import { Room, RoomApi } from './room';
+import { Sensor, SensorApi } from './sensor';
+import { ShutterApi, Shutter } from './shutter';
+import { ThermostatApi, Thermostat } from './thermostat';
+import { User, UserApi } from './user';
 export declare const parseApiResponse: {
     toConsumptionData: (response: ConsumptionApiData) => ConsumptionData;
     toStatistics: (response: StatisticsApi) => Statistics;
@@ -11,5 +16,10 @@ export declare const parseApiResponse: {
     toInstallation: (response: InstallationApi) => Installation;
     toNotification: (response: NotificationApi) => Notification;
     toOutput: (response: OutputApi) => Output;
-    ToScene: (response: SceneApi) => Scene;
+    toRoom: (response: RoomApi) => Room;
+    toScene: (response: SceneApi) => Scene;
+    toSensor: (response: SensorApi) => Sensor;
+    toShutter: (response: ShutterApi) => Shutter;
+    toThermostat: (response: ThermostatApi) => Thermostat;
+    toUser: (response: UserApi) => User;
 };
