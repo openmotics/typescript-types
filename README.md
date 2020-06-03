@@ -7,7 +7,7 @@
 
 Execute the following command:
 ```
-npm i openmotics-types
+npm i @openmotics/types
 ```
 
 #### 2. Include them in your TypeScript compiler 
