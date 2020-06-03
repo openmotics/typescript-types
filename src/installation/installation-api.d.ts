@@ -23,7 +23,7 @@ export interface InstallationApi {
     };
     gateway_features: string[];
     gateway_model: string;
-    network: {
+    network?: {
         local_ip_address: string;
     };
     registration_key: string;

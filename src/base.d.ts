@@ -1,9 +1,39 @@
 /**
  *
- * A acl might contain an property containing and ACL (access control list) or null,
+ * A BaseApi object contain a default response properties
+ *
+ * @param _acl - The object that include access info {@link AclApi}
+ * @param _error - The container always contains an _error field. It will be null when no error occurred, or will contain an error message. When _error is not null an extra field, _errorCode, will be available, containing an error code. This code, together with client knowledge (which endpoint has been called) might be used to provide user friendly (translated) error messages.
+ * @param _paging - When requesting lists, the client can request paging to be applied. This is possible by adding a JSON encoded paging object to the url inside a paging parameter.
+ * @param data - Array of requested data
+ */
+export interface BaseResponseApi<T = object> {
+    _acl: AclApi;
+    _error: object | null;
+    _paging: PaginationApi;
+    data: Array<T>;
+}
+/**
+ *
+ * A BaseApi object contain a default response properties
+ *
+ * @param _acl - The object that include access info {@link AclApi}
+ * @param _error - The container always contains an _error field. It will be null when no error occurred, or will contain an error message. When _error is not null an extra field, _errorCode, will be available, containing an error code. This code, together with client knowledge (which endpoint has been called) might be used to provide user friendly (translated) error messages.
+ * @param _paging - When requesting lists, the client can request paging to be applied. This is possible by adding a JSON encoded paging object to the url inside a paging parameter.
+ * @param data - Array of requested data
+ */
+export interface BaseResponse<T = object> {
+    acl: Acl;
+    error: object | null;
+    paging: Pagination;
+    data: Array<T>;
+}
+/**
+ *
+ * A acl might contain a property containing and ACL (access control list) or null,
  * indicating what actions are possible and if not might indicate why they are not possible.
  *
- * @param action - The object that include access info
+ * @param _acl - The object that include access info
  */
 export interface AclApi {
     _acl: {
@@ -15,10 +45,10 @@ export interface AclApi {
 }
 /**
  *
- * A acl might contain an property containing and ACL (access control list) or null,
+ * A acl might contain a property containing and ACL (access control list) or null,
  * indicating what actions are possible and if not might indicate why they are not possible.
  *
- * @param action - The object that include access info
+ * @param acl - The object that include access info
  */
 export interface Acl {
     acl: {
@@ -27,6 +57,38 @@ export interface Acl {
             reason: string;
         };
     };
+}
+/**
+ * When requesting lists, the client can request paging to be applied.
+ * This is possible by adding a JSON encoded paging object to the url inside a paging parameter.
+ *
+ * @param page - Number of current page
+ * @param items_per_page - Number of items per page
+ * @param number_of_items - Number of all items
+ * @param number_of_pages - Number of all pages
+ *
+ */
+export interface PaginationApi {
+    page: number;
+    items_per_page: number;
+    number_of_items: number;
+    number_of_pages: number;
+}
+/**
+ * When requesting lists, the client can request paging to be applied.
+ * This is possible by adding a JSON encoded paging object to the url inside a paging parameter.
+ *
+ * @param page - Number of current page
+ * @param itemsPerPage - Number of items per page
+ * @param numberOfItems - Number of all items
+ * @param numberOfPages - Number of all pages
+ *
+ */
+export interface Pagination {
+    page: number;
+    itemsPerPage: number;
+    numberOfItems: number;
+    numberOfPages: number;
 }
 /**
  *
