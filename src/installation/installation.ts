@@ -23,7 +23,7 @@ export interface Installation {
   features: { [featureName: string]: Feature };
   gatewayFeatures: string[];
   gatewayModel: string;
-  network: {
+  network?: {
     localIpAddress: string;
   };
   registrationKey: string;
