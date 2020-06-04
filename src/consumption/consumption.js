@@ -19,7 +19,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var ConsumptionType;
 (function (ConsumptionType) {
     ConsumptionType["Electricity"] = "ELECTRICITY";
+    ConsumptionType["Energy"] = "ENERGY";
     ConsumptionType["Gas"] = "GAS";
+    ConsumptionType["Heat"] = "HEAT";
     ConsumptionType["Water"] = "WATER";
 })(ConsumptionType = exports.ConsumptionType || (exports.ConsumptionType = {}));
 var ConsumptionResolution;
