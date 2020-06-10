@@ -1,6 +1,8 @@
 export declare enum ConsumptionType {
     Electricity = "ELECTRICITY",
+    Energy = "ENERGY",
     Gas = "GAS",
+    Heat = "HEAT",
     Water = "WATER"
 }
 export declare enum ConsumptionResolution {

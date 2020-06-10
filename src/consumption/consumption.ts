@@ -17,7 +17,9 @@
 
 export enum ConsumptionType {
   Electricity = 'ELECTRICITY',
+  Energy = 'ENERGY',
   Gas = 'GAS',
+  Heat = 'HEAT',
   Water = 'WATER',
 }
 
