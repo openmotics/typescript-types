@@ -15,7 +15,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import { ShutterStatus } from './shutter';
+import { ShutterState } from './shutter';
 import { BaseObjectApi } from '../base';
 
-export interface ShutterApi extends BaseObjectApi<ShutterStatus> {}
+export interface ShutterStatusApi {
+  state: ShutterState;
+  last_change: number;
+}
+
+export interface ShutterApi extends BaseObjectApi<ShutterStatusApi> {}
