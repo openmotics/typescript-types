@@ -25,3 +25,4 @@ __export(require("./room"));
 __export(require("./shutter"));
 __export(require("./consumption"));
 __export(require("./thermostat"));
+__export(require("./floor"));

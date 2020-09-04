@@ -27,6 +27,7 @@ import { Sensor, SensorApi } from './sensor';
 import { ShutterApi, Shutter } from './shutter';
 import { ThermostatApi, Thermostat } from './thermostat';
 import { User, UserApi } from './user';
+import { Floor, FloorApi } from './floor';
 
 const capitalizeFirstLetter = (str: string, index: number): string => {
   const lowerCaseStr = str.toLowerCase();
@@ -58,7 +59,7 @@ const prepareResponseObject = (data: { [key: string]: any } | object[]): any => 
 };
 
 export const parseApiResponse = {
-  
+
   // Consumption
   toConsumptionData: (response: ConsumptionApiData): ConsumptionData => prepareResponseObject(response),
   toStatistics: (response: StatisticsApi): Statistics => prepareResponseObject(response),
@@ -74,9 +75,12 @@ export const parseApiResponse = {
 
   // Output
   toOutput: (response: OutputApi): Output => prepareResponseObject(response),
-  
+
   // Room
   toRoom: (response: RoomApi): Room => prepareResponseObject(response),
+
+  // Floor
+  toFloor: (response: FloorApi): Floor => prepareResponseObject(response),
 
   // Scene
   toScene: (response: SceneApi): Scene => prepareResponseObject(response),
