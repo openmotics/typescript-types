@@ -15,15 +15,4 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
 Object.defineProperty(exports, "__esModule", { value: true });
-__export(require("./helpers"));
-__export(require("./output"));
-__export(require("./room"));
-__export(require("./shutter"));
-__export(require("./consumption"));
-__export(require("./thermostat"));
-__export(require("./floor"));
-__export(require("./label"));

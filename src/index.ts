@@ -29,3 +29,4 @@ export * from './consumption';
 export * from './notification';
 export * from './thermostat';
 export * from './floor';
+export * from './label';
