@@ -13,6 +13,7 @@ export declare enum ShutterDirections {
 }
 export interface ShutterStatus {
     state: ShutterState;
+    lastChange: number;
 }
 export interface Shutter extends BaseObject<ShutterStatus> {
 }

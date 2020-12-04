@@ -28,6 +28,7 @@ import { ShutterApi, Shutter } from './shutter';
 import { ThermostatApi, Thermostat } from './thermostat';
 import { User, UserApi } from './user';
 import { Floor, FloorApi } from './floor';
+import { Ventilation, VentilationApi } from './ventilations';
 
 const capitalizeFirstLetter = (str: string, index: number): string => {
   const lowerCaseStr = str.toLowerCase();
@@ -96,4 +97,7 @@ export const parseApiResponse = {
 
   // User
   toUser: (response: UserApi): User => prepareResponseObject(response),
+  
+  // Ventilation
+  toVentilation: (response: VentilationApi): Ventilation => prepareResponseObject(response),
 }
