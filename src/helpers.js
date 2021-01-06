@@ -58,6 +58,8 @@ exports.parseApiResponse = {
     toOutput: function (response) { return prepareResponseObject(response); },
     // Room
     toRoom: function (response) { return prepareResponseObject(response); },
+    // Floor
+    toFloor: function (response) { return prepareResponseObject(response); },
     // Scene
     toScene: function (response) { return prepareResponseObject(response); },
     // Sensor
@@ -68,4 +70,6 @@ exports.parseApiResponse = {
     toThermostat: function (response) { return prepareResponseObject(response); },
     // User
     toUser: function (response) { return prepareResponseObject(response); },
+    // Ventilation
+    toVentilation: function (response) { return prepareResponseObject(response); },
 };

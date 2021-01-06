@@ -15,19 +15,5 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-export * from './base';
-export * from './helpers';
-export * from './device';
-export * from './output';
-export * from './room';
-export * from './scene';
-export * from './user';
-export * from './sensor';
-export * from './shutter';
-export * from './installation';
-export * from './consumption';
-export * from './notification';
-export * from './thermostat';
-export * from './floor';
-export * from './ventilations';
-export * from './label';
+export * from './ventilation';
+export * from './ventilation-api';

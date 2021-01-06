@@ -9,6 +9,8 @@ import { Sensor, SensorApi } from './sensor';
 import { ShutterApi, Shutter } from './shutter';
 import { ThermostatApi, Thermostat } from './thermostat';
 import { User, UserApi } from './user';
+import { Floor, FloorApi } from './floor';
+import { Ventilation, VentilationApi } from './ventilations';
 export declare const parseApiResponse: {
     toConsumptionData: (response: ConsumptionApiData) => ConsumptionData;
     toStatistics: (response: StatisticsApi) => Statistics;
@@ -17,9 +19,11 @@ export declare const parseApiResponse: {
     toNotification: (response: NotificationApi) => Notification;
     toOutput: (response: OutputApi) => Output;
     toRoom: (response: RoomApi) => Room;
+    toFloor: (response: FloorApi) => Floor;
     toScene: (response: SceneApi) => Scene;
     toSensor: (response: SensorApi) => Sensor;
     toShutter: (response: ShutterApi) => Shutter;
     toThermostat: (response: ThermostatApi) => Thermostat;
     toUser: (response: UserApi) => User;
+    toVentilation: (response: VentilationApi) => Ventilation;
 };
