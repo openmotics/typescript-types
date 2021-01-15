@@ -13,3 +13,4 @@ export * from './notification';
 export * from './thermostat';
 export * from './floor';
 export * from './ventilations';
+export * from './label';
