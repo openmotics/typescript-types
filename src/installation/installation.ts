@@ -24,7 +24,7 @@ export interface Feature {
 export interface InstallationUpdate {
   id: number;
   description: string;
-  to_version: {
+  toVersion: {
     version: string;
   };
 }
