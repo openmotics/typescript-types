@@ -34,7 +34,7 @@ export interface Installation {
   name: string;
   flags: {
     ONLINE: boolean | null;
-    updateAvaliable: InstallationUpdate | null;
+    updateAvailable: InstallationUpdate | null;
     unreadNotifications: number | null;
   };
   features: { [featureName: string]: Feature };
