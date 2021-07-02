@@ -1,4 +1,11 @@
-import { Feature, InstallationUpdate } from "./installation";
+import { Feature } from "./installation";
+export interface InstallationUpdateApi {
+    id: number;
+    description: string;
+    to_version: {
+        version: string;
+    };
+}
 export interface InstallationApi {
     id: number;
     name: string;
@@ -16,7 +23,7 @@ export interface InstallationApi {
     flags: {
         ONLINE: boolean | null;
         UNREAD_NOTIFICATIONS: number | null;
-        UPDATE_AVAILABLE?: InstallationUpdate;
+        UPDATE_AVAILABLE?: InstallationUpdateApi;
     };
     features: {
         [featureName: string]: Feature;

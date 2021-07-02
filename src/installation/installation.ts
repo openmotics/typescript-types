@@ -24,7 +24,7 @@ export interface Feature {
 export interface InstallationUpdate {
   id: number;
   description: string;
-  to_version: {
+  toVersion: {
     version: string;
   };
 }
@@ -34,7 +34,7 @@ export interface Installation {
   name: string;
   flags: {
     ONLINE: boolean | null;
-    updateAvaliable: InstallationUpdate | null;
+    updateAvailable: InstallationUpdate | null;
     unreadNotifications: number | null;
   };
   features: { [featureName: string]: Feature };
